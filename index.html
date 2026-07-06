@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DevOps Engineer | AWS Cloud | CI/CD | Kubernetes | Terraform - Koduri Veeraprasad's Professional Portfolio">
-    <meta name="keywords" content="DevOps, AWS, Kubernetes, Terraform, Jenkins, Cloud Engineer, Portfolio">
+    <meta name="description" content="Koduri Veeraprasad - AWS DevOps Engineer with 3.2+ years of experience in AWS Cloud, CI/CD automation (Jenkins, GitHub Actions), Terraform, Docker, Kubernetes (Amazon EKS), and Ansible. Explore projects, skills, and experience.">
+    <meta name="keywords" content="AWS DevOps Engineer, AWS Cloud, CI/CD, Jenkins, GitHub Actions, Docker, Kubernetes, Amazon EKS, Terraform, Ansible, SonarQube, Trivy, Prometheus, Grafana, Infrastructure as Code, Cloud Engineer Portfolio, Koduri Veeraprasad">
     <meta name="author" content="Koduri Veeraprasad">
-    <title>Koduri Veeraprasad - DevOps Engineer | AWS Cloud Solutions</title>
-    
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Koduri Veeraprasad - AWS DevOps Engineer">
+    <meta property="og:description" content="AWS DevOps Engineer with 3.2+ years of experience in AWS Cloud, CI/CD, Terraform, Docker, Kubernetes (EKS), Jenkins, GitHub Actions and Ansible.">
+    <meta property="og:url" content="https://veeraprasadportfolio.online/">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Koduri Veeraprasad - AWS DevOps Engineer">
+    <meta name="twitter:description" content="AWS DevOps Engineer with 3.2+ years of experience in AWS Cloud, CI/CD, Terraform, Docker, Kubernetes (EKS).">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Koduri Veeraprasad | AWS DevOps Engineer - AWS Cloud, CI/CD & Kubernetes</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -386,7 +398,7 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -417,6 +429,10 @@
 
         .skill-item {
             margin-bottom: 1.5rem;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
         }
 
         .skill-name {
@@ -509,6 +525,14 @@
         .project-content h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
         }
 
         .project-content p {
@@ -647,6 +671,21 @@
         .timeline-description {
             font-size: 0.95rem;
             opacity: 0.8;
+        }
+
+        .timeline-description ul {
+            margin: 0.5rem 0 0;
+            padding-left: 1.1rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-description ul {
+            padding-left: 0;
+            padding-right: 1.1rem;
+            list-style-position: inside;
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.4rem;
         }
 
         /* Education Section */
@@ -955,6 +994,60 @@
             border-top-color: var(--border-dark);
         }
 
+        /* Nav Resume Button */
+        .nav-resume-btn {
+            background: var(--gradient-1);
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+        }
+
+        .nav-resume-btn::after {
+            display: none;
+        }
+
+        .nav-resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Skills Tags */
+        .hero-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0.5rem 0 0.5rem;
+        }
+
+        .hero-skills span {
+            background: var(--card-light);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-light);
+            color: var(--primary);
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        body.dark-mode .hero-skills span {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+            color: var(--primary-light);
+        }
+
+        /* Contact Resume Button */
+        .contact-resume-btn {
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             nav .container {
@@ -963,6 +1056,14 @@
 
             .nav-links {
                 gap: 1rem;
+            }
+
+            .nav-resume-btn span {
+                display: none;
+            }
+
+            .nav-resume-btn {
+                padding: 8px 12px;
             }
 
             section {
@@ -1000,6 +1101,12 @@
                 grid-column: 1 !important;
                 text-align: left !important;
                 margin-left: 30px;
+            }
+
+            .timeline-item .timeline-description ul {
+                padding-left: 1.1rem;
+                padding-right: 0;
+                list-style-position: outside;
             }
 
             .projects-grid,
@@ -1099,6 +1206,11 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
+                    <a href="assets/resume/Veeraprasad_Devops_Engineer_Resume.pdf" download="Veeraprasad_Devops_Engineer_Resume.pdf" class="nav-resume-btn resume-download-btn" title="Download Resume">
+                        <i class="fas fa-download"></i><span>Resume</span>
+                    </a>
+                </li>
+                <li>
                     <button class="theme-toggle" aria-label="Toggle dark mode">
                         <div class="toggle-circle">
                             <i class="fas fa-sun"></i>
@@ -1118,9 +1230,24 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Hi, I'm <span class="typing-effect" id="typingEffect">Koduri Veeraprasad</span></h1>
-                    <p>A passionate DevOps Engineer crafting scalable cloud infrastructure and automating deployment pipelines. With 3.2+ years of hands-on experience, I transform complex infrastructure challenges into elegant, efficient solutions using AWS, Kubernetes, and Terraform.</p>
+                    <p>AWS DevOps Engineer with 3.2+ years of experience building CI/CD pipelines, provisioning cloud infrastructure with Terraform, and deploying containerized applications on Amazon EKS. I work daily with Jenkins, GitHub Actions, Docker, Kubernetes, and Ansible to automate deployments, and use SonarQube, Trivy, Prometheus, and Grafana to keep releases secure and production environments stable.</p>
+                    <div class="hero-skills">
+                        <span>AWS Cloud</span>
+                        <span>CI/CD</span>
+                        <span>Jenkins</span>
+                        <span>GitHub Actions</span>
+                        <span>Docker</span>
+                        <span>Kubernetes (EKS)</span>
+                        <span>Terraform</span>
+                        <span>Ansible</span>
+                        <span>SonarQube</span>
+                        <span>Trivy</span>
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>Linux</span>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="Veeraprasad_Koduri_Resume.pdf" download class="btn btn-primary">
+                        <a href="assets/resume/Veeraprasad_Devops_Engineer_Resume.pdf" download="Veeraprasad_Devops_Engineer_Resume.pdf" class="btn btn-primary resume-download-btn">
                             <i class="fas fa-download"></i> Download Resume
                         </a>
                         <a href="#contact" class="btn btn-secondary">
@@ -1142,10 +1269,10 @@
 
             <div class="about-grid">
                 <div class="about-content">
-                    <h3>DevOps Engineer & Cloud Engineer</h3>
-                    <p>I'm a passionate DevOps engineer with 3.2 years of hands-on experience in designing and maintaining scalable cloud infrastructure. My expertise spans AWS cloud services, containerization with Docker and Kubernetes, infrastructure automation using Terraform and Ansible, and CI/CD pipeline development with Jenkins and GitHub Actions.</p>
-                    <p>My mission is to bridge the gap between development and operations by creating robust, automated, and scalable solutions that enable teams to deliver faster and more reliably. I believe in the power of automation, infrastructure as code, and continuous improvement.</p>
-                    <p>Beyond technical skills, I'm a collaborative team player who thrives in Agile environments, loves mentoring junior engineers, and is constantly learning to stay updated with the latest cloud technologies and best practices.</p>
+                    <h3>AWS DevOps Engineer</h3>
+                    <p>I'm an AWS DevOps Engineer with 3.2 years of experience helping teams ship software faster and more reliably. Most of my day-to-day work revolves around AWS Cloud, building and maintaining CI/CD pipelines in Jenkins and GitHub Actions, and provisioning infrastructure with Terraform so environments stay consistent and repeatable across Dev, QA, UAT, and Production.</p>
+                    <p>On the deployment side, I containerize applications with Docker and run them on Amazon EKS, using Helm along with Rolling Update and Blue-Green strategies to roll out changes with minimal risk. I lean on Ansible for server provisioning and configuration, and I've integrated SonarQube and Trivy into pipelines to catch code quality and container vulnerability issues before they ever reach production.</p>
+                    <p>I'm also the one keeping an eye on things once they're live — setting up Prometheus, Grafana, and CloudWatch dashboards and alerts, digging into incidents, doing root cause analysis, and working closely with Development, QA, Security, and Operations to keep releases smooth. I'm comfortable on Linux day to day, and I work in an Agile environment where communication and quick iteration matter just as much as the automation itself.</p>
                 </div>
 
                 <div class="stats-grid">
@@ -1154,8 +1281,8 @@
                         <div class="stat-label">Years of Experience</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="12">0</div>
-                        <div class="stat-label">Projects Delivered</div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">CI/CD Pipelines Maintained</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" data-target="99.9">0</div>
@@ -1176,10 +1303,10 @@
 
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <h3><i class="fas fa-cloud"></i> Cloud</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>AWS Cloud Services</span>
+                            <span>AWS (EC2, VPC, IAM, S3)</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
@@ -1188,7 +1315,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Kubernetes (EKS)</span>
+                            <span>Amazon EKS, ECR, ALB</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -1197,26 +1324,17 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Docker & Containerization</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%; animation-delay: 0.2s;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Terraform & IaC</span>
+                            <span>CloudWatch, CloudTrail, Route 53</span>
                             <span>88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%; animation-delay: 0.3s;"></div>
+                            <div class="skill-progress" style="width: 88%; animation-delay: 0.2s;"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-cogs"></i> CI/CD & Automation</h3>
+                    <h3><i class="fas fa-cogs"></i> DevOps Tools</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Jenkins</span>
@@ -1237,42 +1355,86 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Ansible</span>
-                            <span>85%</span>
+                            <span>Git, GitHub, Maven, Nexus</span>
+                            <span>88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%; animation-delay: 0.3s;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Maven & Git</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%; animation-delay: 0.4s;"></div>
+                            <div class="skill-progress" style="width: 88%; animation-delay: 0.3s;"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Monitoring & Logging</h3>
+                    <h3><i class="fas fa-boxes"></i> Containerization</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Kubernetes (Amazon EKS)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%; animation-delay: 0.1s;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Helm</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%; animation-delay: 0.2s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Infrastructure as Code</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Terraform</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Ansible</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%; animation-delay: 0.1s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Monitoring</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Prometheus & Grafana</span>
                             <span>88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%; animation-delay: 0.1s;"></div>
+                            <div class="skill-progress" style="width: 88%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>CloudWatch & Logging</span>
+                            <span>Amazon CloudWatch</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%; animation-delay: 0.2s;"></div>
+                            <div class="skill-progress" style="width: 90%; animation-delay: 0.1s;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -1281,29 +1443,64 @@
                             <span>82%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 82%; animation-delay: 0.3s;"></div>
+                            <div class="skill-progress" style="width: 82%; animation-delay: 0.2s;"></div>
                         </div>
                     </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>SonarQube</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%; animation-delay: 0.4s;"></div>
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Trivy</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%; animation-delay: 0.1s;"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                    <h3><i class="fas fa-terminal"></i> Scripting</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Bash</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%; animation-delay: 0.1s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>MySQL & PostgreSQL</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%; animation-delay: 0.1s;"></div>
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -1312,25 +1509,42 @@
                             <span>88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%; animation-delay: 0.2s;"></div>
+                            <div class="skill-progress" style="width: 88%; animation-delay: 0.1s;"></div>
                         </div>
                     </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Linux Administration</span>
+                            <span>Linux (RHEL/Ubuntu)</span>
                             <span>92%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%; animation-delay: 0.3s;"></div>
+                            <div class="skill-progress" style="width: 92%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Bash & Python Scripting</span>
-                            <span>88%</span>
+                            <span>Windows</span>
+                            <span>75%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%; animation-delay: 0.4s;"></div>
+                            <div class="skill-progress" style="width: 75%; animation-delay: 0.1s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-ticket-alt"></i> Ticketing</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Jira</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
                 </div>
@@ -1343,7 +1557,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Featured Projects</h2>
-                <p>Showcasing my best work in cloud infrastructure and DevOps automation</p>
+                <p>Showcasing my work in cloud infrastructure and DevOps automation</p>
             </div>
 
             <div class="projects-grid">
@@ -1353,16 +1567,20 @@
                     </div>
                     <div class="project-content">
                         <h3>Wayfair E-Commerce Platform</h3>
-                        <p>Cloud infrastructure and DevOps automation for a large-scale e-commerce platform with 99.9% uptime SLA.</p>
+                        <span class="project-meta">Cloud Infrastructure & DevOps Automation | Sep 2024 – Present</span>
+                        <p>Automated CI/CD pipelines with Jenkins and GitHub Actions, provisioned AWS infrastructure with Terraform, and deployed containerized applications on Amazon EKS. Maintained 15+ pipelines with a 98% deployment success rate and 99.9% application availability using Prometheus, Grafana, and CloudWatch.</p>
                         <div class="tech-stack">
-                            <span class="tech-badge">AWS</span>
-                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">AWS (EC2, VPC, IAM, S3, ECR, EKS)</span>
                             <span class="tech-badge">Jenkins</span>
+                            <span class="tech-badge">GitHub Actions</span>
                             <span class="tech-badge">Terraform</span>
+                            <span class="tech-badge">Kubernetes (EKS)</span>
+                            <span class="tech-badge">Helm</span>
+                            <span class="tech-badge">SonarQube</span>
+                            <span class="tech-badge">Trivy</span>
                         </div>
                         <div class="project-buttons">
-                            <a href="#projects" title="View Details"><i class="fas fa-eye"></i> Details</a>
-                            <a href="#projects" title="GitHub Repository"><i class="fas fa-github"></i> GitHub</a>
+                            <a href="#experience" title="View Details"><i class="fas fa-eye"></i> Details</a>
                         </div>
                     </div>
                 </div>
@@ -1373,36 +1591,19 @@
                     </div>
                     <div class="project-content">
                         <h3>FinTech Platform</h3>
-                        <p>Secure digital payment processing system with microservices architecture and automated CI/CD pipelines.</p>
+                        <span class="project-meta">Cloud Infrastructure Automation for FinTech Platform | May 2023 – Aug 2024</span>
+                        <p>Supported CI/CD pipelines across Dev, QA, UAT, and Production for a cloud-native payments and financial reporting platform. Built and deployed 10+ microservices on Amazon EKS using Helm and Rolling Update strategy, and reduced manual provisioning effort by 50% with Ansible and Shell scripting.</p>
                         <div class="tech-stack">
-                            <span class="tech-badge">AWS EKS</span>
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">Terraform</span>
-                            <span class="tech-badge">Prometheus</span>
-                        </div>
-                        <div class="project-buttons">
-                            <a href="#projects" title="View Details"><i class="fas fa-eye"></i> Details</a>
-                            <a href="#projects" title="GitHub Repository"><i class="fas fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Infrastructure Automation Suite</h3>
-                        <p>Enterprise-grade infrastructure as code framework supporting multi-environment deployments with GitOps practices.</p>
-                        <div class="tech-stack">
+                            <span class="tech-badge">AWS (EC2, VPC, IAM, S3, Route 53, EKS)</span>
+                            <span class="tech-badge">Jenkins</span>
                             <span class="tech-badge">Terraform</span>
                             <span class="tech-badge">Ansible</span>
-                            <span class="tech-badge">GitHub Actions</span>
-                            <span class="tech-badge">Helm</span>
+                            <span class="tech-badge">SonarQube & Nexus</span>
+                            <span class="tech-badge">Prometheus & Grafana</span>
+                            <span class="tech-badge">ELK Stack</span>
                         </div>
                         <div class="project-buttons">
-                            <a href="#projects" title="View Details"><i class="fas fa-eye"></i> Details</a>
-                            <a href="#projects" title="GitHub Repository"><i class="fas fa-github"></i> GitHub</a>
+                            <a href="#experience" title="View Details"><i class="fas fa-eye"></i> Details</a>
                         </div>
                     </div>
                 </div>
@@ -1425,7 +1626,16 @@
                         <div class="timeline-company">GROWSERVE E-Solutions Pvt Ltd</div>
                         <div class="timeline-date">Sep 2024 – Present</div>
                         <div class="timeline-description">
-                            <strong>Wayfair E-Commerce Platform:</strong> Architected and maintained CI/CD pipelines using Jenkins and GitHub Actions. Provisioned AWS infrastructure with Terraform, deployed containerized applications on Amazon EKS. Achieved 99.9% application availability through comprehensive monitoring and alerting strategies.
+                            <strong>Wayfair E-Commerce Platform – Cloud Infrastructure & DevOps Automation</strong>
+                            <ul>
+                                <li>Maintained 15+ CI/CD pipelines using Jenkins and GitHub Actions for build, code scan, Docker image creation, and EKS deployment.</li>
+                                <li>Deployed containerized applications on Amazon EKS using Docker, Kubernetes, and Helm with Rolling Update/Blue-Green strategies, achieving 98% deployment success.</li>
+                                <li>Provisioned AWS infrastructure (EC2, VPC, IAM, S3, ALB, Auto Scaling, EKS) using Terraform across multiple environments.</li>
+                                <li>Automated server provisioning and configuration with Ansible, Python, and Shell scripting.</li>
+                                <li>Integrated SonarQube Quality Gates and Trivy image scanning into CI/CD pipelines, reducing build failures by 30%.</li>
+                                <li>Configured Prometheus, Grafana, and CloudWatch dashboards/alerts, helping maintain 99.9% application availability.</li>
+                                <li>Handled production deployments, performed RCA, and reduced release time by 40% working with Development, QA, Security, and Operations.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1437,7 +1647,16 @@
                         <div class="timeline-company">GROWSERVE E-Solutions Pvt Ltd</div>
                         <div class="timeline-date">May 2023 – Aug 2024</div>
                         <div class="timeline-description">
-                            <strong>FinTech Platform:</strong> Designed and maintained CI/CD pipelines for secure payment processing. Built Docker images and deployed on Amazon EKS using Helm. Automated server provisioning with Terraform and Ansible. Implemented monitoring using Prometheus, Grafana, and ELK Stack.
+                            <strong>Cloud Infrastructure Automation for FinTech Platform</strong>
+                            <ul>
+                                <li>Supported Jenkins CI/CD pipelines across Development, QA, UAT, and Production environments for a cloud-native payments platform.</li>
+                                <li>Created and maintained AWS infrastructure using Terraform for EC2, VPC, IAM, S3, Route 53, ALB, Auto Scaling, and Amazon EKS.</li>
+                                <li>Built Docker images and deployed 10+ microservices on Amazon EKS using Helm and Rolling Update strategy.</li>
+                                <li>Performed server provisioning and configuration with Ansible and Shell scripting, reducing manual activities by 50%.</li>
+                                <li>Configured SonarQube and Nexus in Jenkins pipelines for code quality checks and artifact management.</li>
+                                <li>Set up monitoring and logging using Prometheus, Grafana, ELK Stack, and CloudWatch, reducing incident resolution time to 2–3 hours.</li>
+                                <li>Managed IAM roles, security groups, and access controls following project security standards.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1461,7 +1680,7 @@
                     </div>
                     <h3>Bachelor of Technology</h3>
                     <p><strong>KIET Group of Institutions</strong></p>
-                    <p style="margin-top: 0.5rem;">JNTUK, Kakinada</p>
+                    <p style="margin-top: 0.5rem;">Affiliated to JNTUK, Kakinada</p>
                     <p style="font-size: 0.85rem; margin-top: 0.5rem;">Graduated: 2021</p>
                 </div>
             </div>
@@ -1490,7 +1709,7 @@
                         <i class="fas fa-boxes"></i>
                     </div>
                     <h3>Container Orchestration</h3>
-                    <p>Implement and manage Kubernetes clusters, containerization strategies, and microservices deployment using Docker and Helm.</p>
+                    <p>Implement and manage Kubernetes clusters on Amazon EKS, containerization strategies, and microservices deployment using Docker and Helm.</p>
                 </div>
 
                 <div class="service-card">
@@ -1498,7 +1717,7 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>CI/CD Pipeline Development</h3>
-                    <p>Build automated deployment pipelines using Jenkins, GitHub Actions, and other CI/CD tools to accelerate release cycles.</p>
+                    <p>Build automated deployment pipelines using Jenkins and GitHub Actions to accelerate release cycles and reduce build failures.</p>
                 </div>
 
                 <div class="service-card">
@@ -1506,7 +1725,7 @@
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Infrastructure as Code</h3>
-                    <p>Create reproducible, version-controlled infrastructure using Terraform and Ansible for consistent environments.</p>
+                    <p>Create reproducible, version-controlled infrastructure using Terraform and Ansible for consistent multi-environment deployments.</p>
                 </div>
 
                 <div class="service-card">
@@ -1519,10 +1738,10 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>DevOps Consulting</h3>
-                    <p>Provide expert guidance on DevOps transformation, best practices, and strategy to optimize your organization's delivery pipeline.</p>
+                    <h3>Security & Code Quality</h3>
+                    <p>Integrate SonarQube quality gates and Trivy vulnerability scanning into pipelines to catch issues before they reach production.</p>
                 </div>
             </div>
         </div>
@@ -1584,6 +1803,10 @@
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
+
+                    <a href="assets/resume/Veeraprasad_Devops_Engineer_Resume.pdf" download="Veeraprasad_Devops_Engineer_Resume.pdf" class="btn btn-primary contact-resume-btn resume-download-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
                 </div>
 
                 <form class="contact-form" id="contactForm">
@@ -1634,7 +1857,7 @@
                         <li><a href="#services">Cloud Solutions</a></li>
                         <li><a href="#services">CI/CD Automation</a></li>
                         <li><a href="#services">Infrastructure as Code</a></li>
-                        <li><a href="#services">DevOps Consulting</a></li>
+                        <li><a href="#services">Monitoring & Observability</a></li>
                     </ul>
                 </div>
 
@@ -1686,10 +1909,10 @@
         const typingElement = document.getElementById('typingEffect');
         const roles = [
             'Koduri Veeraprasad',
-            'DevOps Engineer',
-            'Cloud Architect',
-            'Infrastructure Specialist',
-            'Automation Expert'
+            'AWS DevOps Engineer',
+            'Cloud Infrastructure Engineer',
+            'CI/CD Automation Specialist',
+            'Kubernetes & Terraform Engineer'
         ];
 
         let currentRoleIndex = 0;
@@ -1805,27 +2028,59 @@
 
         // ========== Resume Download Handler ==========
         function initResumeDownload() {
-            const resumeLinks = document.querySelectorAll('a[download="Veeraprasad_Koduri_Resume.pdf"]');
+            const resumeLinks = document.querySelectorAll('.resume-download-btn');
             const resumeAlert = document.getElementById('resumeAlert');
+            const isLocalFile = window.location.protocol === 'file:';
 
             // Hide the alert - resume is always available
-            resumeAlert.style.display = 'none';
+            if (resumeAlert) {
+                resumeAlert.style.display = 'none';
+            }
 
-            // Add direct download functionality to all resume links
             resumeLinks.forEach(link => {
+                if (isLocalFile) {
+                    // Browsers block forced downloads from file:// pages for security reasons.
+                    // Fall back to opening the PDF in a new tab so it can still be viewed/saved
+                    // manually (right-click > Save As) while testing locally.
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                    link.removeAttribute('download');
+                    return;
+                }
+
+                // On a real http(s) host, force a same-tab download using fetch + blob.
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // Create a temporary anchor element for download
-                    const downloadLink = document.createElement('a');
-                    downloadLink.href = 'Veeraprasad_Koduri_Resume.pdf';
-                    downloadLink.download = 'Veeraprasad_Koduri_Resume.pdf';
-                    downloadLink.style.display = 'none';
-                    
-                    // Add to DOM, click, and remove
-                    document.body.appendChild(downloadLink);
-                    downloadLink.click();
-                    document.body.removeChild(downloadLink);
+
+                    const resumePath = link.getAttribute('href');
+                    const resumeName = link.getAttribute('download') || 'Veeraprasad_Devops_Engineer_Resume.pdf';
+
+                    fetch(resumePath)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Resume file not found at ' + resumePath);
+                            }
+                            return response.blob();
+                        })
+                        .then(blob => {
+                            const blobUrl = URL.createObjectURL(blob);
+                            const downloadLink = document.createElement('a');
+                            downloadLink.href = blobUrl;
+                            downloadLink.download = resumeName;
+                            downloadLink.style.display = 'none';
+
+                            document.body.appendChild(downloadLink);
+                            downloadLink.click();
+                            document.body.removeChild(downloadLink);
+
+                            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+                        })
+                        .catch(() => {
+                            // If the fetch fails (e.g. file missing), fall back to a normal
+                            // navigation so the browser's native handling takes over instead
+                            // of silently doing nothing or showing a broken placeholder.
+                            window.location.href = resumePath;
+                        });
                 });
             });
         }
@@ -1886,7 +2141,7 @@
 
         // ========== Active Navigation Link ==========
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        const navLinks = document.querySelectorAll('.nav-links a:not(.nav-resume-btn)');
 
         window.addEventListener('scroll', () => {
             let current = '';
